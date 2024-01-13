@@ -18,4 +18,5 @@ steps:
     - '--platform=managed'
     - '--region=us-central1'
     - '--allow-unauthenticated'
+    - '--port=80'
     # - '--set-env-vars=KEY=VALUE'
