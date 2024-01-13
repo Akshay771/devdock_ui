@@ -1,0 +1,21 @@
+# UI BUILD and PUSH
+
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  id: UI-Build
+  args: ['build', '-f', 'Dockerfile', '-t', 'gcr.io/${PROJECT_ID}/devdock-ui-release:$TAG_NAME', '.']
+
+- name: 'gcr.io/cloud-builders/docker'
+  id: UI-Push
+  args: ['push', 'gcr.io/${PROJECT_ID}/devdock-ui-release:$TAG_NAME']
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+    - 'run'
+    - 'deploy'
+    - 'DevDock'
+    - '--image=gcr.io/${PROJECT_ID}/devdock-ui-release:$TAG_NAME'
+    - '--platform=managed'
+    - '--region=us-central1'
+    - '--allow-unauthenticated'
+    # - '--set-env-vars=KEY=VALUE'
