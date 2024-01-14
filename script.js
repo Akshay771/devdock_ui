@@ -5,7 +5,7 @@ function submitForm(event) {
     var form = document.getElementById("contactForm");
     var formData = new FormData(form);
 
-    var xhr = new XMLHttpsRequest();
+    var xhr = new XMLHttpRequest();
     xhr.open("POST", "https://devdock.work.gd/submit_form", true);
 
     xhr.onreadystatechange = function () {
