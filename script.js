@@ -12,7 +12,7 @@ function submitForm(event) {
         var formData = new FormData(form);
 
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://devdock.work.gd/submit_form", true);
+        xhr.open("POST", "https://devdock.work.gd/submit-form", true);
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4) {
