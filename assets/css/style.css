@@ -1,9 +1,33 @@
 .development-banner {
   background-color: #ffc107;
   color: #333;
-  padding: 3px;
+  /* padding: 2px; */
   text-align: center;
   font-weight: bold;
+}
+
+/* Responsive styles for mobile phones */
+@media (max-width: 767px) {
+  .development-banner {
+    font-size: 16px; /* Adjust font size for mobile phones */
+    /* Add any other styles for mobile phones */
+  }
+}
+
+/* Responsive styles for tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .development-banner {
+    font-size: 18px; /* Adjust font size for tablets */
+    /* Add any other styles for tablets */
+  }
+}
+
+/* Responsive styles for desktops */
+@media (min-width: 1024px) {
+  .development-banner {
+    font-size: 24px; /* Adjust font size for desktops */
+    /* Add any other styles for desktops */
+  }
 }
 
 .download-button {
