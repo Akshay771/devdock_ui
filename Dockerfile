@@ -12,3 +12,4 @@ EXPOSE 8080
 
 # Command to run on container start
 CMD ["nginx", "-g", "daemon off;"]
+# modified
